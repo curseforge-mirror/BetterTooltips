@@ -1,5 +1,5 @@
 -- Generated using WoW 8.0.1.27547 client data on 2018-09-05T14:56:15.003460.
-AdvancedTooltips.BackupData = {
+BetterTooltips.BackupData = {
     [17] = 7,
     [117] = 433,
     [118] = 439,

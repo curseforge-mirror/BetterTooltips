@@ -6,7 +6,7 @@ E_AZERITE_POWER = 5
 E_SPELLID = 6
 E_DESC = 7
 E_REFID = 8
-AdvancedTooltips.Items = {
+BetterTooltips.Items = {
 	[870] = {
 		[1] = {
 			[E_CHANCE] = 1,
@@ -14016,7 +14016,7 @@ AdvancedTooltips.Items = {
 	},
 }
 
-AdvancedTooltips.SpellData = {
+BetterTooltips.SpellData = {
 			[17] = {
 			},
 			[53] = {
@@ -49926,7 +49926,7 @@ AdvancedTooltips.SpellData = {
 			},
 }
 
-AdvancedTooltips.EnchantData = {
+BetterTooltips.EnchantData = {
 		[15] = 0,
 		[2831] = 0,
 		[16] = 0,
