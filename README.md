@@ -1,12 +1,5 @@
 ### Better Tooltips
 ---
-Better Tooltips is an addon for World of Warcraft dedicated to adding more information to item tooltips.
+This is a up to date version of https://www.curseforge.com/wow/addons/advanced-tooltips which works with the latest version of WoW Shadowlands.
 
-#### RPPM information
-   Trinkets
-   
-![Trinket](https://i.imgur.com/b2Y3jtA.png)
-    
-   Enchants
-    
-![Enchant](https://i.imgur.com/kGvEVvP.png)
+I intend only to update this for maintenance reasons (bugs and game version updates) only; no feature updates are planned.
