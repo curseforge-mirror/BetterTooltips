@@ -831,13 +831,16 @@ function BetterTooltips:OnEnable()
 	--if _G["BetterTooltips_Config.G"] == nil then BetterTooltips_Config.G = .7 else BetterTooltips_Config.G = _G["BetterTooltips_Config.G"] end
 	--if _G["BetterTooltips_Config.B"] == nil then BetterTooltips_Config.B = .7 else BetterTooltips_Config.B = _G["BetterTooltips_Config.B"] end
 
-	GameTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltip_Item(..., GameTooltip) end)
-	ItemRefTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltip_Item(..., ItemRefTooltip) end)
-	ShoppingTooltip1:HookScript("OnTooltipSetItem", function(...) OnTooltip_Item(..., ShoppingTooltip1) end)
-	ShoppingTooltip2:HookScript("OnTooltipSetItem", function(...) OnTooltip_Item(..., ShoppingTooltip2) end)
-	GameTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpell(..., GameTooltip) end)
-	ItemRefTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpell(..., ItemRefTooltip) end)
-	--WorldMapTooltip.ItemTooltip.Tooltip:HookScript('OnTooltipSetItem', function(...) OnTooltip_Item(..., WorldMapTooltip.ItemTooltip.Tooltip) end)
+	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(...)
+		if tooltip == GameTooltip or tooltip == ItemRefTooltip or tooltip == ShoppingTooltip1 or tooltip == ShoppingTooltip2 then
+			OnTooltip_Item(..., tooltip)
+		end
+	end)
+	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Spell, function(...)
+		if tooltip == GameTooltip or tooltip == ItemRefTooltip then
+			OnTooltipSpell(..., tooltip)
+		end
+	end)
 end
 
 function BetterTooltips:AfterEnable()

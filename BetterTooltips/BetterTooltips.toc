@@ -1,6 +1,6 @@
-## Interface: 90002
+## Interface: 100005
 ## Title: Better Tooltips
-## Author: collinstevens, lcs
+## Author: collinstevens, lcs, srhinos
 ## Version: v1.0.0
 ## OptionalDeps: Ace3, AceGUI-3.0-SharedMediaWidgets, LibCompress, LibWindow-1.1
 ## SavedVariablesPerCharacter: BetterTooltips_Config
